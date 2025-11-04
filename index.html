@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Vivek Tichkule — UI/UX · Graphic Designer · Creative Marketing</title>
+  <meta name="description" content="UI/UX & Graphic Designer portfolio and resume of Vivek Tichkule. Projects, graphics collections, certificates, and a single resume download link." />
+  <meta name="keywords" content="Vivek Tichkule, UI UX Designer, Graphic Designer, Visual Designer, Creative Marketing Designer, India, Maharashtra, Lakhani, Figma, Photoshop, Illustrator, Power BI, Advanced Excel, CCC, DesignWings" />
+  <meta name="theme-color" content="#F97316" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== THEME PALETTES ===== */
+
+    /* FORCE-HIDE THEME SWATCHES */
+    .theme-switch, .swatch { display: none !important; width:0 !important; height:0 !important; padding:0 !important; margin:0 !important; border:0 !important; }
+
+    :root{
+      --bg:#0b0f1f; --card:#131737; --muted:#a7a9c9;
+      --accent1:#7C3AED; --accent2:#FF7A59; --accent3:#12D3CF; --accent4:#FFD166; --accent5:#22D3EE;
+      --radius:18px; --shadow:0 12px 34px rgba(0,0,0,.35);
+    }
+    /* Theme B (Midnight Neon) */
+    .theme-b{
+      --bg:#0b1220; --card:#0f1630; --muted:#b6b9da;
+      --accent1:#5A9DF9; --accent2:#B26BF2; --accent3:#1FE4A7; --accent4:#F7B801; --accent5:#6DF6FF;
+    }
+    /* Theme C (Royal Sunset) — DEFAULT */
+    .theme-c{
+      --bg:#120E22; --card:#1A1434; --muted:#c9cbe6;
+      --accent1:#F43F5E; --accent2:#F97316; --accent3:#22C55E; --accent4:#FACC15; --accent5:#38BDF8;
+    }
+    /* Day mode variant (lighter backgrounds, retains accents) */
+    .day{
+      --bg:#F6F7FB; --card:#FFFFFF; --muted:#5a5e7a;
+    }
+    body.theme-c{ /* default class on body */ }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 800px at 10% 10%, #14183d 0%, var(--bg) 55%), var(--bg);color:#fff;font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;}
+
+    /* Contrast tweaks for day mode */
+    body.day{ color:#111 }
+    body.day a{ color:#b45309 }
+    body.day .card{ border-color:rgba(0,0,0,.08) }
+    body.day header{ background:rgba(255,255,255,.75); border-bottom:1px solid rgba(0,0,0,.06) }
+    body.day .nav-links a{ color:#222 }
+    body.day .subtitle{ color:#334155 }
+
+    /* Gradients derive from theme variables */
+    .grad{background:linear-gradient(135deg,var(--accent1),var(--accent2));}
+    .grad2{background:linear-gradient(135deg,var(--accent3),var(--accent4));}
+    .grad-move{background:linear-gradient(90deg,var(--accent1),var(--accent2),var(--accent3),var(--accent4),var(--accent1));background-size:300% 100%;animation:gradRun 8s linear infinite}
+    @keyframes gradRun{to{background-position:300% 0}}
+
+    /* ✨ Animated ambient background */
+    body::before, body::after{content:"";position:fixed;inset:-20%;z-index:-2;filter:blur(50px);opacity:.8;animation:bgFloat 18s ease-in-out infinite alternate}
+    body::before{background:radial-gradient(60% 40% at 15% 20%, rgba(244,63,94,.45) 0%, transparent 60%),radial-gradient(40% 60% at 85% 30%, rgba(249,115,22,.35) 0%, transparent 60%)}
+    body::after{background:radial-gradient(50% 50% at 50% 90%, rgba(34,197,94,.35) 0%, transparent 60%)}
+    @keyframes bgFloat{to{transform:translateY(-24px)}}
+    body.day::before, body.day::after{filter:blur(60px);opacity:.6}
+
+    a{color:var(--accent4);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,15,31,.55);backdrop-filter: blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:42px;height:42px;border-radius:12px;box-shadow:var(--shadow);}
+    .brand h1{font-size:18px;margin:0}
+    .nav-links a{margin:0 10px;font-weight:600;color:#dfe3ff;position:relative}
+    .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:linear-gradient(135deg,var(--accent1),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+    .nav-links a:hover::after{transform:scaleX(1)}
+    .cta{background:linear-gradient(135deg,var(--accent1),var(--accent2));padding:10px 16px;border-radius:12px;color:#fff;font-weight:700;box-shadow:var(--shadow)}
+
+    
+    /* NAV LINKS SCROLL */
+    .nav-links{display:flex;justify-content:center;gap:16px;min-width:0;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+    .nav-links::-webkit-scrollbar{display:none}
+    
+    /* Theme & Day/Night switcher */
+    .controls{display:flex;gap:14px;align-items:center}
+    .theme-switch{display:flex;gap:8px;align-items:center}
+    .swatch{width:26px;height:26px;border-radius:999px;box-shadow:0 0 0 2px rgba(255,255,255,.15) inset;cursor:pointer;border:1px solid rgba(255,255,255,.15)}
+    .swatch.a{background:linear-gradient(135deg,#7C3AED,#FF7A59)}
+    .swatch.b{background:linear-gradient(135deg,#5A9DF9,#B26BF2)}
+    .swatch.c{background:linear-gradient(135deg,#F43F5E,#F97316)}
+
+    .mode-toggle{display:flex;align-items:center;gap:8px;cursor:pointer}
+    .toggle{width:56px;height:28px;border-radius:999px;background:linear-gradient(135deg,var(--accent2),var(--accent1));position:relative;border:1px solid rgba(255,255,255,.2)}
+    .knob{position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:transform .3s ease}
+    .sun,.moon{font-size:14px}
+    body.day .knob{transform:translateX(28px)}
+
+    /* Progress bar */
+    .progress{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(135deg,var(--accent3),var(--accent4));z-index:30;box-shadow:0 0 12px rgba(0,0,0,.3)}
+
+    /* Hero */
+    .hero{min-height:86vh;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:28px 0}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+    body.day .card{background:#fff}
+    .title{font-size:52px;line-height:1.06;margin:0 0 16px;position:relative}
+    .title .grad-text{background:linear-gradient(90deg,var(--accent1),var(--accent2),var(--accent3),var(--accent4),var(--accent1));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradRun 8s linear infinite}
+    .subtitle{color:#d0d4ff;margin:6px 0 18px}
+    body.day .subtitle{color:#475569}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 22px}
+    .badge{padding:8px 12px;border-radius:999px;background:linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.12);font-weight:600;color:#e9ecff}
+    body.day .badge{background:#f1f5f9;color:#1f2937;border-color:#e2e8f0}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;font-weight:700;border:1px solid rgba(255,255,255,.12);position:relative;overflow:hidden}
+    .btn::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transform:translateX(-120%)}
+    .btn:hover::before{animation:shine .9s}
+    @keyframes shine{to{transform:translateX(120%)}}
+    .btn.primary{background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff}
+    .btn.ghost{background:transparent;color:#e7eaff}
+    body.day .btn.ghost{color:#0f172a;border-color:#e2e8f0}
+
+    .side{position:relative}
+    .blob{position:absolute;inset:-16px -16px auto auto;filter:blur(34px);opacity:.6;width:240px;height:240px;border-radius:50%;animation:float 6s ease-in-out infinite}
+    .blob.grad{background:linear-gradient(135deg,var(--accent3),var(--accent4));}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    .profile{position:relative;isolation:isolate}
+    .photo-wrap{position:relative;perspective:800px;max-width:360px;margin:auto}
+    .photo{width:100%;border-radius:18px;display:block;border:1px solid rgba(255,255,255,.15);box-shadow:0 20px 60px rgba(0,0,0,.5);transform:rotateX(0) rotateY(0);transition:transform .2s ease, box-shadow .2s ease}
+    .glow{position:absolute;inset:-8%;background:linear-gradient(135deg,var(--accent1),transparent 40%);filter:blur(30px);border-radius:24px;opacity:.6;z-index:-1}
+    .photo-wrap:hover .photo{transform:rotateX(6deg) rotateY(-6deg);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+
+    /* Sections */
+    section{padding:36px 0}
+    h2.section-title{font-size:26px;margin:0 0 14px}
+    .grid{display:grid;gap:18px}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+
+    .pill{font-size:13px;font-weight:700;letter-spacing:.06em;color:#111;background:#ffd166;border-radius:999px;padding:6px 10px;display:inline-block}
+
+    .list-links{display:grid;gap:10px}
+    .list-links a{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#e7eaff;font-weight:600;transition:transform .2s ease}
+    .list-links a:hover{transform:translateY(-2px)}
+    body.day .list-links a{background:#f8fafc;color:#111;border-color:#e2e8f0}
+
+    /* Tabs section (Skills & Experience) */
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+    .tab{padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);cursor:pointer;font-weight:700}
+    .tab.active{background:linear-gradient(135deg,var(--accent1),var(--accent2))}
+    body.day .tab{border-color:#e2e8f0;color:#111}
+    .tab-panel{display:none}
+    .tab-panel.active{display:block}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.12);padding:6px 10px;border-radius:999px;color:#cbd3ff;font-weight:600}
+    body.day .chip{background:#f1f5f9;color:#0f172a;border-color:#e2e8f0}
+
+    /* Timeline for case studies */
+    .timeline{position:relative;margin-top:10px}
+    .timeline::before{content:"";position:absolute;left:12px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--accent1),transparent)}
+    .tl-item{position:relative;padding-left:36px;margin:12px 0}
+    .tl-item::before{content:"";position:absolute;left:6px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--accent1);box-shadow:0 0 0 3px rgba(255,255,255,.08)}
+    .tl-item h4{margin:.2rem 0}
+    .tl-item p{margin:.2rem 0;color:#d6d9ff}
+    body.day .tl-item p{color:#334155}
+
+    /* Reveal on scroll */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* Tiny birds + custom cursor */
+    body{cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g transform="translate(8,12)"><path fill="%23FACC15" d="M0 8 L10 0 L16 8 L10 16 Z"/><circle cx="12" cy="8" r="2" fill="%23000"/></g></svg>') 10 10, auto;}
+    .bird{position:fixed;left:0;top:0;width:14px;height:10px;pointer-events:none;z-index:5;opacity:.85;transform:translate(-50%,-50%)}
+    .bird:before{content:"";position:absolute;inset:0;background:conic-gradient(from 10deg, var(--accent5), var(--accent2));clip-path:polygon(0% 50%, 70% 0%, 100% 50%, 70% 100%)}
+    .bird.small{width:10px;height:7px;opacity:.7}
+
+    footer{padding:30px 0;color:#aeb2d4}
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px){
+      .container{padding:18px}
+      .title{font-size:42px}
+    }
+    @media (max-width: 780px){
+      nav{grid-template-columns:1fr auto;grid-row-gap:6px}
+      .brand{order:1}
+      .nav-links{order:3;gap:10px;font-size:14px}
+      .controls{order:2}
+      header .brand h1{font-size:16px}
+      .cta{padding:8px 12px}
+
+      nav{flex-wrap:wrap;gap:10px}
+      .nav-links{display:flex;flex-wrap:wrap;gap:8px}
+      .hero{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .title{font-size:34px}
+      .badge{padding:7px 10px}
+      .btn{padding:12px 14px}
+    }
+    @media (hover:none){
+      .photo-wrap:hover .photo{transform:none}
+    }
+  </style>
+</head>
+<body class="theme-c">
+  <div class="progress" id="progress"></div>
+  <header class="reveal">
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo grad"></div>
+          <h1>Vivek Tichkule</h1>
+        </div>
+        <div class="nav-links">
+          <a href="#intro">Home</a>
+          <a href="#graphics">Graphics</a>
+          <a href="#uiux">UI/UX</a>
+          <a href="#skills">Skills & Experience</a>
+          <a href="#case">Case Studies</a>
+          <a href="#certs">Certificates</a>
+          <a href="#resume" class="cta">Resume</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="controls">
+          
+            <div class="swatch b" data-theme="b"></div>
+            <div class="swatch c" data-theme="c" title="Royal Sunset (default)"></div>
+          </div>
+          <div class="mode-toggle" id="modeToggle" title="Day/Night">
+            <span class="sun">☀️</span>
+            <div class="toggle"><div class="knob"></div></div>
+            <span class="moon">🌙</span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ENTRANCE / INTRO -->
+    <section id="intro" class="hero reveal">
+      <div class="card">
+        <p class="pill">PORTFOLIO · RESUME</p>
+        <h2 class="title"><span class="grad-move" style="-webkit-background-clip:text;background-clip:text;color:transparent">Vivek Tichkule</span></h2>
+        <h3 class="subtitle" style="font-size:18px;margin-top:-6px">UI/UX Designer · Graphic & Visual Designer · Creative Marketing</h3>
+        <div class="badges">
+          <span class="badge">Design Systems</span>
+          <span class="badge">Branding</span>
+          <span class="badge">Motion</span>
+          <span class="badge">Power BI / Excel</span>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="#graphics">See Graphics Work</a>
+          <a class="btn ghost" href="#uiux">Explore UI/UX</a>
+        </div>
+      </div>
+      <div class="side">
+        <div class="blob grad" aria-hidden="true"></div>
+        <div class="profile card">
+          <div class="photo-wrap">
+            <div class="glow"></div>
+            <img src="profile.jpg" alt="Vivek Tichkule portrait" class="photo"/>
+          </div>
+          <div class="chips" style="margin-top:12px">
+            <span class="chip">Lakhani, Maharashtra</span>
+            <span class="chip">Available: Full-time / Freelance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRAPHICS COLLECTIONS -->
+    <section id="graphics" class="reveal">
+      <div class="card">
+        <h2 class="section-title">Graphics Design Collections</h2>
+        <div class="list-links">
+          <a href="https://www.behance.net/vivekt9" target="_blank" rel="noopener">Behance — Main Portfolio<span>→</span></a>
+          <a href="https://drive.google.com/drive/folders/1FwD568GycPj9Zd7WMEHBzbXLBjgoAog2?usp=drive_link" target="_blank" rel="noopener">My Work Drive — Master Folder<span>→</span></a>
+          <a href="https://drive.google.com/drive/folders/1eK9O3GGb0TteYQztSwqqpBHtuj5SxWUP?usp=drive_link" target="_blank" rel="noopener">Morning Greetings — EDIFY MDN EDUCATION<span>→</span></a>
+          <a href="https://drive.google.com/drive/folders/1H8k2w0it6UetYXbTUbvAmlsjMtEyKzBO?usp=drive_link" target="_blank" rel="noopener">Regular Graphics — MDN Future School, Lakhani<span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- UI/UX PROJECTS -->
+    <section id="uiux" class="reveal">
+      <div class="card">
+        <h2 class="section-title">UI/UX Projects</h2>
+        <div class="list-links">
+          <a href="https://www.figma.com/proto/q9ZRMwaP1byDl5GMa2ztzs/HRMS---Vivek-Tichkule---Group-Project?node-id=3-32239&p=f&t=YOyx2NnIv3HLzfhd-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A32233&show-proto-sidebar=1" target="_blank" rel="noopener">HRMS Application — Figma Prototype<span>→</span></a>
+          <a href="https://www.figma.com/proto/9g5s1vqw4XrEnfpxBxKY4N/PRISE?node-id=55-432&p=f&t=eCrod1FY8tdcbDUC-1&scaling=scale-down&content-scaling=fixed&page-id=49%3A43&starting-point-node-id=55%3A432&show-proto-sidebar=1" target="_blank" rel="noopener">Pricify App — Compare & Shop (Prototype)<span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS & EXPERIENCE (Tabbed) -->
+    <section id="skills" class="reveal">
+      <div class="card">
+        <h2 class="section-title">Skills & Experience</h2>
+        <div class="tabs" role="tablist" aria-label="Skills tabs">
+          <button class="tab active" role="tab" aria-controls="tab-skills" aria-selected="true">Core Skills</button>
+          <button class="tab" role="tab" aria-controls="tab-experience" aria-selected="false">Experience</button>
+          <button class="tab" role="tab" aria-controls="tab-education" aria-selected="false">Education & Certs</button>
+          <button class="tab" role="tab" aria-controls="tab-achievements" aria-selected="false">Achievements</button>
+        </div>
+
+        <div id="tab-skills" class="tab-panel active" role="tabpanel">
+          <div class="grid grid-3">
+            <div>
+              <strong>UI/UX</strong>
+              <ul>
+                <li>Wireframing & Prototyping (Figma, XD)</li>
+                <li>Design Systems & Style Guides</li>
+                <li>User Research & Journeys</li>
+                <li>Usability Testing & Accessibility</li>
+                <li>Responsive Web & Mobile UI</li>
+              </ul>
+            </div>
+            <div>
+              <strong>Graphic & Visual</strong>
+              <ul>
+                <li>Photoshop, Illustrator, InDesign, CorelDRAW</li>
+                <li>Branding & Identity, Social Ad Creatives</li>
+                <li>Print & Digital Collateral</li>
+                <li>Motion Posters & Banners</li>
+              </ul>
+            </div>
+            <div>
+              <strong>Video & Motion</strong>
+              <ul>
+                <li>Filmora, DaVinci Resolve, Premiere Pro</li>
+                <li>Visual Storytelling</li>
+                <li>Basic After Effects</li>
+              </ul>
+              <strong style="display:block;margin-top:8px">Soft Skills</strong>
+              <ul>
+                <li>Creativity & Innovation</li>
+                <li>Communication & Collaboration</li>
+                <li>Attention to Detail</li>
+                <li>Strategic Thinking & Time Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-experience" class="tab-panel" role="tabpanel">
+          <div class="grid grid-2">
+            <div>
+              <strong>MDN Future School, Lakhani</strong><br>
+              <em>Art Teacher · Graphics Designer · Video Editor · Marketing Head (2018–Present)</em>
+              <ul>
+                <li>Designed 300+ posters, banners & campaign creatives</li>
+                <li>Led branding & digital presence; festive & admission drives</li>
+                <li>Created 100+ news/event videos & motion visuals</li>
+                <li>Built consistent design language across platforms</li>
+                <li>Boosted admissions engagement by <strong>35%</strong></li>
+              </ul>
+            </div>
+            <div>
+              <strong>Freelance — Local Print Shop</strong><br>
+              <em>Contract Graphic Designer (2020–Present)</em>
+              <ul>
+                <li>Custom banners & digital posters for regional clients</li>
+                <li>Delivered 200+ print/digital visuals on tight timelines</li>
+                <li>Storefront branding & marketing collaterals</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-education" class="tab-panel" role="tabpanel">
+          <div class="grid grid-2">
+            <div>
+              <strong>Education</strong>
+              <ul>
+                <li>B.Com — 2021</li>
+                <li>A.T.D. (Art Teacher Diploma) — 2020</li>
+              </ul>
+            </div>
+            <div>
+              <strong>Certifications</strong>
+              <ul>
+                <li>UI/UX — DesignWings (June 2024)</li>
+                <li>Adobe Creative Suite Mastery</li>
+                <li>Video Editing & Motion (Filmora, DaVinci)</li>
+                <li>Typography & Layout Essentials</li>
+                <li>Color Theory & Visual Composition</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-achievements" class="tab-panel" role="tabpanel">
+          <ul>
+            <li>Led digital campaigns increasing admissions & online engagement by <strong>35%</strong></li>
+            <li>Standardized reusable branding templates for faster output</li>
+            <li>Recognized for high-quality event branding & poster design</li>
+            <li>Built workflow improving creative speed & quality</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section id="case" class="reveal">
+      <div class="card">
+        <h2 class="section-title">Case Studies</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>HRMS — Employee Management</h3>
+            <p class="subtitle">Goal: Streamline HR tasks for admins & employees with an intuitive mobile-first flow.</p>
+            <div class="timeline">
+              <div class="tl-item"><h4>Discovery & Research</h4><p>Stakeholder interviews; mapped Admin/HR/Employee journeys; fixed leave & attendance pain-points.</p></div>
+              <div class="tl-item"><h4>IA & Wireframes</h4><p>Sitemap + low-fidelity flows for Login, Dashboard, Leave, Attendance, Payslips.</p></div>
+              <div class="tl-item"><h4>Visual Design & Components</h4><p>Design system: colors, type, buttons, cards & forms.</p></div>
+              <div class="tl-item"><h4>Prototype & Test</h4><p>Clickable Figma; 5-user test; improved navigation & status visibility.</p></div>
+              <a class="btn primary" target="_blank" rel="noopener" href="https://www.figma.com/proto/q9ZRMwaP1byDl5GMa2ztzs/HRMS---Vivek-Tichkule---Group-Project?node-id=3-32239&p=f&t=YOyx2NnIv3HLzfhd-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A32233&show-proto-sidebar=1">Open Figma Prototype</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Pricify — Compare & Shop</h3>
+            <p class="subtitle">Goal: Help users compare prices quickly across stores and save more.</p>
+            <div class="timeline">
+              <div class="tl-item"><h4>Problem & Audience</h4><p>Shoppers want best deal fast. Core tasks: search, compare, wishlist.</p></div>
+              <div class="tl-item"><h4>Flows & Wireframes</h4><p>Search → Product → Compare → Save → Notify; clear comparison table.</p></div>
+              <div class="tl-item"><h4>Visual Language</h4><p>Bright palette; clear CTAs; helpful empty states.</p></div>
+              <div class="tl-item"><h4>Prototype & Feedback</h4><p>Tested with 6 users; improved filters & discount indicators.</p></div>
+              <a class="btn primary" target="_blank" rel="noopener" href="https://www.figma.com/proto/9g5s1vqw4XrEnfpxBxKY4N/PRISE?node-id=55-432&p=f&t=eCrod1FY8tdcbDUC-1&scaling=scale-down&content-scaling=fixed&page-id=49%3A43&starting-point-node-id=55%3A432&show-proto-sidebar=1">Open Figma Prototype</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certs" class="reveal">
+      <div class="card">
+        <h2 class="section-title">Certificates</h2>
+        <div class="grid grid-2">
+          <a class="card" href="https://drive.google.com/file/d/1Y3ZVR-xntQ1WHoEToiu5OQJkxg1UYEcN/view?usp=sharing" target="_blank" rel="noopener"><strong>UI/UX — DesignWings (June 2024)</strong><br><span class="subtitle">View Certificate</span></a>
+          <a class="card" href="https://drive.google.com/file/d/182vG9mlFknnwyoZoKyzkc9fgzfJ6ob7L/view?usp=drive_link" target="_blank" rel="noopener"><strong>Udemy — HTML & JavaScript (Beginners)</strong><br><span class="subtitle">View Certificate</span></a>
+          <a class="card" href="https://drive.google.com/file/d/1S8ug4yOGUcv8LiOHlymuDwH0776g8mDw/view?usp=drive_link" target="_blank" rel="noopener"><strong>OpenAI — Certificate</strong><br><span class="subtitle">View Certificate</span></a>
+          <a class="card" href="https://drive.google.com/file/d/1iPbNntfmV5TyAqaAfcur1y4bPYKELVZs/view?usp=drive_link" target="_blank" rel="noopener"><strong>WordPress — Web Editing & Design</strong><br><span class="subtitle">View Certificate</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME (single link only) -->
+    <section id="resume" class="reveal">
+      <div class="card">
+        <h2 class="section-title">Resume</h2>
+        <p class="subtitle">Single official resume download link:</p>
+        <a class="btn primary" href="https://drive.google.com/file/d/1K0Q2mBvsNpV332l0rkOX7qzgEx4p5L0a/view?usp=sharing" target="_blank" rel="noopener">Download Resume (Google Drive)</a>
+      </div>
+    </section>
+
+    <!-- LIVE WEBSITE -->
+    <section id="live" class="reveal">
+      <div class="card">
+        <h2 class="section-title">Currently Managing</h2>
+        <div class="list-links">
+          <a href="https://mdnfutureschoollakhani.com/" target="_blank" rel="noopener">MDN Future School — Official Website<span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card reveal">
+      <h2 class="section-title">Contact</h2>
+      <div class="grid grid-2">
+        <div class="card"><strong>Email</strong><br><a href="mailto:vivek.tichkule04@gmail.com">vivek.tichkule04@gmail.com</a></div>
+        <div class="card"><strong>Phone</strong><br><a href="tel:+919049758225">+91 9049758225</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container reveal">
+    © <span id="y"></span> Vivek Tichkule · Designed & coded with ♥
+  </footer>
+
+  <script>
+    // Scroll progress
+    const bar = document.getElementById('progress');
+    const setBar = ()=>{const s=window.scrollY, h=document.body.scrollHeight-innerHeight; bar.style.width = (s/h*100)+"%"};
+    addEventListener('scroll', setBar, {passive:true}); setBar();
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
+    }, {threshold: .12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Day/Night toggle
+    const mode = document.getElementById('modeToggle');
+    mode.addEventListener('click', ()=>{
+      document.body.classList.toggle('day');
+    });
+
+    // Tabs logic
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.tab-panel');
+    tabs.forEach((t,i)=>{
+      t.addEventListener('click', ()=>{
+        tabs.forEach(x=>x.classList.remove('active')); t.classList.add('active');
+        panels.forEach(p=>p.classList.remove('active')); panels[i].classList.add('active');
+      });
+    });
+
+    // 🐦 Tiny birds that follow the cursor (smoother & mobile-safe)
+    const BIRDS = 6;
+    const birds = [];
+    for(let i=0;i<BIRDS;i++){
+      const b = document.createElement('div');
+      b.className = 'bird'+(i%2?' small':'');
+      document.body.appendChild(b);
+      birds.push({el:b, x: innerWidth/2, y: innerHeight/2, lag: 0.08 + i*0.02});
+    }
+    let mx = innerWidth/2, my = innerHeight/2;
+    const setPoint = (x,y)=>{ mx=x; my=y; };
+    window.addEventListener('mousemove', (e)=> setPoint(e.clientX, e.clientY));
+    window.addEventListener('touchmove', (e)=>{ if(e.touches[0]) setPoint(e.touches[0].clientX, e.touches[0].clientY) }, {passive:true});
+
+    function fly(){
+      birds.forEach((b)=>{
+        b.x += (mx - b.x) * b.lag;
+        b.y += (my - b.y) * b.lag;
+        b.el.style.transform = `translate(${b.x}px, ${b.y}px)`;
+      });
+      requestAnimationFrame(fly);
+    }
+    fly();
+  </script>
+</body>
+</html>
