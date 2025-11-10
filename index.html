@@ -242,14 +242,14 @@
         <h2 class="title"><span class="grad-move" style="-webkit-background-clip:text;background-clip:text;color:transparent">Vivek Tichkule</span></h2>
         <h3 class="subtitle" style="font-size:18px;margin-top:-6px">UI/UX Designer · Graphic & Visual Designer · Creative Marketing</h3>
         <div class="badges">
-          <span class="badge">Design Systems</span>
+          <span class="badge">UI UX Designs</span>
           <span class="badge">Branding</span>
-          <span class="badge">Motion</span>
+          <span class="badge">Graphics</span>
           <span class="badge">Power BI / Excel</span>
         </div>
         <div class="actions">
-          <a class="btn primary" href="#graphics">See Graphics Work</a>
-          <a class="btn ghost" href="#uiux">Explore UI/UX</a>
+            <a class="btn ghost" href="#uiux">Explore UI/UX</a>
+            <a class="btn primary" href="#graphics">See Graphics Work</a>
         </div>
       </div>
       <div class="side">
@@ -267,28 +267,113 @@
       </div>
     </section>
 
-    <!-- GRAPHICS COLLECTIONS -->
-    <section id="graphics" class="reveal">
-      <div class="card">
-        <h2 class="section-title">Graphics Design Collections</h2>
-        <div class="list-links">
-          <a href="https://www.behance.net/vivekt9" target="_blank" rel="noopener">Behance — Main Portfolio<span>→</span></a>
-          <a href="https://drive.google.com/drive/folders/1FwD568GycPj9Zd7WMEHBzbXLBjgoAog2?usp=drive_link" target="_blank" rel="noopener">My Work Drive — Master Folder<span>→</span></a>
-          <a href="https://drive.google.com/drive/folders/1eK9O3GGb0TteYQztSwqqpBHtuj5SxWUP?usp=drive_link" target="_blank" rel="noopener">Morning Greetings — EDIFY MDN EDUCATION<span>→</span></a>
-          <a href="https://drive.google.com/drive/folders/1H8k2w0it6UetYXbTUbvAmlsjMtEyKzBO?usp=drive_link" target="_blank" rel="noopener">Regular Graphics — MDN Future School, Lakhani<span>→</span></a>
-        </div>
-      </div>
-    </section>
-
     <!-- UI/UX PROJECTS -->
     <section id="uiux" class="reveal">
-      <div class="card">
-        <h2 class="section-title">UI/UX Projects</h2>
-        <div class="list-links">
-          <a href="https://www.figma.com/proto/q9ZRMwaP1byDl5GMa2ztzs/HRMS---Vivek-Tichkule---Group-Project?node-id=3-32239&p=f&t=YOyx2NnIv3HLzfhd-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A32233&show-proto-sidebar=1" target="_blank" rel="noopener">HRMS Application — Figma Prototype<span>→</span></a>
-          <a href="https://www.figma.com/proto/9g5s1vqw4XrEnfpxBxKY4N/PRISE?node-id=55-432&p=f&t=eCrod1FY8tdcbDUC-1&scaling=scale-down&content-scaling=fixed&page-id=49%3A43&starting-point-node-id=55%3A432&show-proto-sidebar=1" target="_blank" rel="noopener">Pricify App — Compare & Shop (Prototype)<span>→</span></a>
+  <style>
+    #uiux .uigrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    @media(max-width:920px){#uiux .uigrid{grid-template-columns:1fr}}
+    #uiux .uicard{border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden;background:rgba(255,255,255,.04)}
+    body.day #uiux .uicard{background:#fff;border-color:#e2e8f0}
+    #uiux .shots{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:12px}
+    #uiux .shots img{width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.12);object-fit:cover}
+    #uiux .uibody{padding:14px}
+    #uiux details.proto{margin-top:10px;border-top:1px dashed rgba(255,255,255,.18);padding-top:10px}
+    #uiux details.proto summary{cursor:pointer;font-weight:700}
+    #uiux .iframe-wrap{position:relative;padding-top:62%;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.12);margin-top:10px}
+    #uiux .iframe-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  </style>
+
+  <div class="card">
+    <h2 class="section-title">UI/UX Projects</h2>
+
+    <div class="uigrid">
+      <!-- HRMS -->
+      <div class="uicard">
+        <div class="shots">
+          <img src="HOME-HRMS.jpg" alt="HRMS Home screen">
+          <img src="HRMS-Salary Details.png" alt="HRMS Salary details screen">
+        </div>
+        <div class="uibody">
+          <strong>HRMS — Employee Management</strong>
+          <p class="subtitle">Mobile-first flows for HR tasks.</p>
+          <p><a class="btn primary" target="_blank" rel="noopener"
+            href="https://www.figma.com/proto/q9ZRMwaP1byDl5GMa2ztzs/HRMS---Group-Project?node-id=3-32239&p=f&t=LjC9AQ7QxSwX4UmZ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A32233&show-proto-sidebar=1">Open Prototype</a></p>
+          <details class="proto">
+            <summary>Preview prototype inline</summary>
+            <div class="iframe-wrap">
+              <iframe loading="lazy"
+                src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/q9ZRMwaP1byDl5GMa2ztzs/HRMS---Group-Project?node-id=3-32239&p=f&t=LjC9AQ7QxSwX4UmZ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A32233&show-proto-sidebar=1">
+              </iframe>
+            </div>
+          </details>
         </div>
       </div>
+
+      <!-- Pricify -->
+      <div class="uicard">
+        <div class="shots">
+          <img src="HOME-Pricify.png" alt="Pricify Home screen">
+          <img src="PRICIFY-Category.png" alt="Pricify Category screen">
+        </div>
+        <div class="uibody">
+          <strong>Pricify — Compare & Shop</strong>
+          <p class="subtitle">Fast price comparison & deals.</p>
+          <p><a class="btn primary" target="_blank" rel="noopener"
+            href="https://www.figma.com/proto/9g5s1vqw4XrEnfpxBxKY4N/PRISE?node-id=124-5711&t=bs4DtrOI1ouo3GG6-1&scaling=scale-down&content-scaling=fixed&page-id=49%3A43&starting-point-node-id=55%3A432&show-proto-sidebar=1">Open Prototype</a></p>
+          <details class="proto">
+            <summary>Preview prototype inline</summary>
+            <div class="iframe-wrap">
+              <iframe loading="lazy"
+                src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/9g5s1vqw4XrEnfpxBxKY4N/PRISE?node-id=124-5711&t=bs4DtrOI1ouo3GG6-1&scaling=scale-down&content-scaling=fixed&page-id=49%3A43&starting-point-node-id=55%3A432&show-proto-sidebar=1">
+              </iframe>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+
+    <!-- GRAPHICS COLLECTIONS -->
+    <section id="graphics" class="reveal">
+  <style>
+    /* Scoped styles for this section only */
+    #graphics .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    @media (max-width:1024px){#graphics .ggrid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){#graphics .ggrid{grid-template-columns:1fr}}
+    #graphics .gcard{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);transition:transform .2s ease}
+    #graphics .gcard:hover{transform:translateY(-4px)}
+    body.day #graphics .gcard{border-color:#e2e8f0;background:#fff}
+    #graphics .gcard img{width:100%;height:100%;display:block;aspect-ratio:1/1;object-fit:cover}
+    #graphics .gtitle{position:absolute;left:10px;bottom:10px;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,.55);color:#fff;font-weight:700}
+    body.day #graphics .gtitle{background:rgba(0,0,0,.7);color:#fff}
+  </style>
+
+  <div class="card">
+    <h2 class="section-title">Graphics Design Collections</h2>
+
+    <div class="ggrid">
+      <a class="gcard" href="https://www.behance.net/vivekt9" target="_blank" rel="noopener">
+        <img src="Behance Portfolio.jpg" alt="Behance — Main Portfolio">
+        <span class="gtitle">Behance — Main Portfolio</span>
+      </a>
+
+      <a class="gcard" href="https://drive.google.com/drive/folders/1FwD568GycPj9Zd7WMEHBzbXLBjgoAog2?usp=drive_link" target="_blank" rel="noopener">
+        <img src="My Work.jpg" alt="My Work Drive — Master Folder">
+        <span class="gtitle">My Work Drive — Master Folder</span>
+      </a>
+
+      <a class="gcard" href="https://drive.google.com/drive/folders/1eK9O3GGb0TteYQztSwqqpBHtuj5SxWUP?usp=drive_link" target="_blank" rel="noopener">
+        <img src="Morning Greetings.jpeg" alt="Morning Greetings — EDIFY MDN EDUCATION">
+        <span class="gtitle">Morning Greetings — EDIFY</span>
+      </a>
+
+      <a class="gcard" href="https://drive.google.com/drive/folders/1H8k2w0it6UetYXbTUbvAmlsjMtEyKzBO?usp=drive_link" target="_blank" rel="noopener">
+        <img src="Regular Graphics.jpeg" alt="Regular Graphics — MDN Future School, Lakhani">
+        <span class="gtitle">Regular Graphics — MDN</span>
+      </a>
+    </div>
+  </div>
     </section>
 
     <!-- SKILLS & EXPERIENCE (Tabbed) -->
@@ -433,16 +518,108 @@
 
     <!-- CERTIFICATES -->
     <section id="certs" class="reveal">
-      <div class="card">
-        <h2 class="section-title">Certificates</h2>
-        <div class="grid grid-2">
-          <a class="card" href="https://drive.google.com/file/d/1Y3ZVR-xntQ1WHoEToiu5OQJkxg1UYEcN/view?usp=sharing" target="_blank" rel="noopener"><strong>UI/UX — DesignWings (June 2024)</strong><br><span class="subtitle">View Certificate</span></a>
-          <a class="card" href="https://drive.google.com/file/d/182vG9mlFknnwyoZoKyzkc9fgzfJ6ob7L/view?usp=drive_link" target="_blank" rel="noopener"><strong>Udemy — HTML & JavaScript (Beginners)</strong><br><span class="subtitle">View Certificate</span></a>
-          <a class="card" href="https://drive.google.com/file/d/1S8ug4yOGUcv8LiOHlymuDwH0776g8mDw/view?usp=drive_link" target="_blank" rel="noopener"><strong>OpenAI — Certificate</strong><br><span class="subtitle">View Certificate</span></a>
-          <a class="card" href="https://drive.google.com/file/d/1iPbNntfmV5TyAqaAfcur1y4bPYKELVZs/view?usp=drive_link" target="_blank" rel="noopener"><strong>WordPress — Web Editing & Design</strong><br><span class="subtitle">View Certificate</span></a>
-        </div>
-      </div>
-    </section>
+  <style>
+    /* Certificates Hover Preview */
+    #certs .cgrid {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+    @media(max-width:700px){
+      #certs .cgrid { grid-template-columns:1fr; }
+    }
+
+    #certs .citem {
+      position:relative;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      padding:18px;
+      background:rgba(255,255,255,.06);
+      transition:transform .25s ease;
+      cursor:pointer;
+    }
+    #certs .citem:hover { transform:translateY(-4px); }
+
+    #certs .citem strong,
+    #certs .citem span { position:relative; z-index:2; display:block; }
+
+    /* Hover Image Overlay */
+    #certs .citem::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background-size:cover;
+      background-position:center;
+      opacity:0;
+      transition:opacity .35s ease;
+    }
+    #certs .citem:hover::after { opacity:1; }
+
+    /* Light theme fix */
+    body.day #certs .citem {
+      background:#fff;
+      border-color:#e2e8f0;
+    }
+  </style>
+
+  <div class="card">
+    <h2 class="section-title">Certificates</h2>
+
+    <div class="cgrid">
+
+      <a class="citem"
+         href="https://drive.google.com/file/d/1Y3ZVR-xntQ1WHoEToiu5OQJkxg1UYEcN/view?usp=sharing"
+         target="_blank" rel="noopener"
+         style="--img:url('https://drive.google.com/thumbnail?id=1Y3ZVR-xntQ1WHoEToiu5OQJkxg1UYEcN&sz=w1200')"
+      >
+        <strong>UI/UX — DesignWings (June 2024)</strong>
+        <span class="subtitle">Hover to Preview</span>
+      </a>
+
+      <a class="citem"
+         href="https://drive.google.com/file/d/182vG9mlFknnwyoZoKyzkc9fgzfJ6ob7L/view?usp=drive_link"
+         target="_blank" rel="noopener"
+         style="--img:url('https://drive.google.com/thumbnail?id=182vG9mlFknnwyoZoKyzkc9fgzfJ6ob7L&sz=w1200')"
+      >
+        <strong>Udemy — HTML & JavaScript (Beginners)</strong>
+        <span class="subtitle">Hover to Preview</span>
+      </a>
+
+      <a class="citem"
+         href="https://drive.google.com/file/d/1S8ug4yOGUcv8LiOHlymuDwH0776g8mDw/view?usp=drive_link"
+         target="_blank" rel="noopener"
+         style="--img:url('https://drive.google.com/thumbnail?id=1S8ug4yOGUcv8LiOHlymuDwH0776g8mDw&sz=w1200')"
+      >
+        <strong>OpenAI — Certificate</strong>
+        <span class="subtitle">Hover to Preview</span>
+      </a>
+
+      <a class="citem"
+         href="https://drive.google.com/file/d/1iPbNntfmV5TyAqaAfcur1y4bPYKELVZs/view?usp=drive_link"
+         target="_blank" rel="noopener"
+         style="--img:url('https://drive.google.com/thumbnail?id=1iPbNntfmV5TyAqaAfcur1y4bPYKELVZs&sz=w1200')"
+      >
+        <strong>WordPress — Web Editing & Design</strong>
+        <span class="subtitle">Hover to Preview</span>
+      </a>
+
+    </div>
+  </div>
+
+  <script>
+    // apply background preview
+    document.querySelectorAll('#certs .citem')
+    .forEach(item => item.style.setProperty('--preview', item.style.getPropertyValue('--img')));
+    document.querySelectorAll('#certs .citem')
+    .forEach(item => item.style.setProperty('--img', ''));
+    const style = document.createElement('style');
+    style.textContent = `#certs .citem::after{background-image:var(--preview);}`;
+    document.head.appendChild(style);
+  </script>
+
+</section>
+
 
     <!-- RESUME (single link only) -->
     <section id="resume" class="reveal">
@@ -455,13 +632,43 @@
 
     <!-- LIVE WEBSITE -->
     <section id="live" class="reveal">
-      <div class="card">
-        <h2 class="section-title">Currently Managing</h2>
-        <div class="list-links">
-          <a href="https://mdnfutureschoollakhani.com/" target="_blank" rel="noopener">MDN Future School — Official Website<span>→</span></a>
-        </div>
+  <style>
+    /* Scoped styles ONLY for this section */
+    #live .preview-card { overflow: hidden; border-radius: 16px; border: 1px solid rgba(255,255,255,.12); }
+    body.day #live .preview-card { border-color:#e2e8f0; }
+    /* 2:16 (1:8) tall viewport */
+    #live .ratio-box { position: relative; width: 100%; aspect-ratio: 2 / 16; max-height: 560px; }
+    #live iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: 0;
+      background: #fff;
+    }
+    #live .actions { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+  </style>
+
+  <div class="card">
+    <h2 class="section-title">Currently Managing</h2>
+    
+    <div class="preview-card">
+      <div class="ratio-box">
+        <!-- Some sites block iframes; if this doesn’t load, use the button below. -->
+        <iframe
+          src="https://mdnfutureschoollakhani.com/"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+          sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+          title="MDN Future School — Live Preview">
+        </iframe>
       </div>
+    </div>
+
+    <div class="actions">
+      <a class="btn primary" href="https://mdnfutureschoollakhani.com/" target="_blank" rel="noopener">Open Full Site</a>
+    </div>
+  </div>
     </section>
+
 
     <!-- CONTACT -->
     <section id="contact" class="card reveal">
